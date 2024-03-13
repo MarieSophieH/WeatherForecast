@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="header">
+        <div id="title">Weather Forecast</div>
+        <form id="myForm">
+            <input type="text" id="textInput" placeholder="Enter zip code or city">
+            <button type="button" id="submitButton">Submit</button>
+        </form>
+    </div>
+    <div class="content">
+        <div class="container">
+            <!-- <div class="subcontainer">
+                <div class="item nonicon item1" id ="weather_condition">
+                    <img src="#" alt="" id="weather_con_icon">
+                    <div id="weather_con_text"></div>
+                </div>
+            </div> -->
+            <div class="subcontainer">
+                <div class="item icon item4" id="sun_icon"></div>
+                <div class="item nonicon item5" id="sun_data">
+                    <div id ="weather_con_text"> </div>
+                    <div id="sunrise">Sunrise: </div>
+                    <div id="sunset">Sunset: </div>
+                    <div id="uv_index">UV-Index: </div>
+                </div>    
+            </div>
+
+            <div class="subcontainer">
+                <div class="item icon item2" id="temperature_icon"></div>
+                <div class="item nonicon item3" id="temperature">
+                    <div id="current_temp">Current temp: </div>
+                    <div id="max_temp">Max temp today: </div>
+                    <div id="min_temp">Min temp today: </div>
+                    <div id="feels_like">Feels like: </div>
+                    <div id="humidity">Humidity: </div>
+                </div>    
+            </div>
+
+            <div class="subcontainer">
+                <div class="item icon item6" id="wind_icon"></div>
+                <div class="item nonicon item7" id="wind_data">
+                    <div id="wind_speed">Wind speed: </div>
+                    <div id="wind_speed_max">Wind speed max: </div>
+                    <div id="wind_dir">Direction: </div>
+                    <div id="wind_degree">Degree: </div>
+                </div>
+            </div>
+          </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
