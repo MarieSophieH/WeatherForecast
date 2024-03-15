@@ -23,6 +23,8 @@ function getWeatherDataFromAPI(location) {
 };
 
 function fillData(currentWeather, marineWeather, forecastWeather){
+    const location = document.getElementById("location");
+    const time = document.getElementById("time");
     const weatherConText = document.getElementById("weather_con_text");
     const currentTemp = document.getElementById("current_temp");
     const maxTemp = document.getElementById("max_temp");
@@ -36,8 +38,12 @@ function fillData(currentWeather, marineWeather, forecastWeather){
     const windDirection = document.getElementById("wind_dir");
     const windDegree = document.getElementById("wind_degree");
     const uvIndex = document.getElementById("uv_index");
+    const weather_icon = document.getElementById("weather_icon");
 
+    location.textContent = currentWeather.location.name + ", " + currentWeather.location.country;
+    time.textContent = currentWeather.location.localtime;
     weatherConText.textContent = currentWeather.current.condition.text;
+    weather_icon.src = "https:" + currentWeather.current.condition.icon;
     currentTemp.textContent = "Current Temperature: " + currentWeather.current.temp_c;
     maxTemp.textContent = "Maximum Temperature: " + forecastWeather.forecast.forecastday[0].day.maxtemp_c;
     minTemp.textContent = "Minimum Temperature: " + forecastWeather.forecast.forecastday[0].day.mintemp_c;
